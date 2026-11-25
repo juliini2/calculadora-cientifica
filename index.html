@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff9fc">
+  <title>Mesa de cálculo — Entre Líneas</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="barra"><a class="marca" href="#inicio" aria-label="Entre Líneas, inicio">entre líneas<span>.</span></a><span class="seccion">MESA DE CÁLCULO</span></header>
+  <main class="composicion" id="inicio">
+    <aside class="editorial">
+      <p class="sobrelinea">CLUB DE ESTUDIO · 01</p>
+      <h1>Una cuenta,<br>un paso más.</h1>
+      <p class="intro">Un espacio para ordenar ideas, probar caminos y llegar al resultado con claridad.</p>
+      <div class="nota-editorial"><span class="marca-nota" aria-hidden="true">✳</span><p>Cuatro operaciones<br>y dos herramientas<br>científicas.</p></div>
+      <p class="ayuda">La raíz cuadrada usa el primer número. Presioná <kbd>Enter</kbd> para calcular.</p>
+      <span class="numero-pagina">01 <i></i> 06</span>
+    </aside>
+    <section class="calculadora" aria-label="Calculadora científica">
+      <section class="panel-resultado" aria-labelledby="titulo-resultado">
+        <div class="encabezado-resultado"><p class="sobrelinea">TU RESULTADO</p><span class="punto-estado" aria-hidden="true"></span></div>
+        <h2 id="titulo-resultado" class="valor" aria-live="polite" aria-atomic="true"><span id="resultado">—</span></h2>
+        <p id="aviso" class="aviso" role="status" aria-live="polite"></p>
+      </section>
+      <form id="formulario-calculo" novalidate>
+        <fieldset class="campos-numericos"><legend class="sobrelinea">LOS NÚMEROS</legend>
+          <div class="campo"><label for="numero-a"><span class="indice">A</span> Primer número</label><input id="numero-a" name="numero-a" type="number" step="any" inputmode="decimal" placeholder="p. ej. 24" autocomplete="off"></div>
+          <span class="separador" aria-hidden="true">+</span>
+          <div class="campo"><label for="numero-b"><span class="indice">B</span> Segundo número <span class="ayuda-campo">(no se usa con raíz)</span></label><input id="numero-b" name="numero-b" type="number" step="any" inputmode="decimal" placeholder="p. ej. 6" autocomplete="off"></div>
+        </fieldset>
+        <div class="campo campo-operacion"><label for="operacion" class="sobrelinea">ELEGÍ UNA OPERACIÓN</label>
+          <select id="operacion" name="operacion"><option value="suma">Sumar</option><option value="resta">Restar</option><option value="multiplicacion">Multiplicar</option><option value="division">Dividir</option><option value="potencia">Potencia</option><option value="raiz">Raíz cuadrada</option></select>
+        </div>
+        <div class="acciones"><button class="boton-principal" id="calcular" type="submit">Calcular <span aria-hidden="true">↗</span></button><button class="boton-secundario" id="limpiar" type="button">Limpiar</button></div>
+      </form>
+      <section class="detalle-panel" aria-labelledby="titulo-detalle"><div><p class="sobrelinea">ÚLTIMA CUENTA</p><p id="detalle" class="detalle">Tu operación aparecerá acá.</p></div><span class="detalle-ornamento" aria-hidden="true">∑</span></section>
+      <p class="pie-calculadora">Un buen paso también es hacer la cuenta.</p>
+    </section>
+  </main>
+  <footer class="pie"><span>ENTRE LÍNEAS</span><span>APRENDER, EN COMPAÑÍA.</span></footer>
+</body>
+</html>
